@@ -1,0 +1,21 @@
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt install software-properties-common nano vsftpd curl git build-essential libssl-dev curl imagemagick libxslt-dev libxml2-dev libmysqlclient-dev mailutils openssl sasl>
+git clone https://github.com/sharetribe/sharetribe.git
+cd sharetribe
+git checkout latest
+gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+sudo apt install gnupg2
+gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+\curl -sSL https://get.rvm.io | bash -s stable
+rvm install 2.7.5
+rvm rubygems current
+rvm use 2.7.5
+gem install bundler
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+ruby -v
+command -v nvm
+nvm install 10.15
+nvm use 10.15
+sudo apt-get install mysql-server -y
+sudo mysql_secure_installation
